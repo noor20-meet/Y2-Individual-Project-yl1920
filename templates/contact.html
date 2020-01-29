@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel ="stylesheet" type = "text/css" href = "../static/css/contact.css" />
+
+
+</head>
+
+<body style="background-image: url('../static/images/background.jpg'); z-index: -1;">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav" style="list-style-type: none;margin: 0;padding: 0;background-color: #851791;overflow: visible;">
+
+						<li><a href="{{url_for('homepage')}}" style="display: block;color: white;text-align: center;padding: 14px 16px;"><i class="fa fa-home tooltip" style="font-size:36px; position: relative;display: inline-block;"><span class="tooltiptext" style='font-size: 20px; '> Home</span> </i></a></li>
+
+					    <li><a href="{{url_for('contact')}}" style="display: block;color: white;text-align: center;padding: 14px 16px;">
+					    	<i class="fa fa-comments-o tooltip" style="font-size:36px; position: relative;display: inline-block;">
+					    		<span class="tooltiptext" style='font-size: 20px;'>Contact us</span>
+					    	</i></a>
+					    </li>
+
+		    			<li><a class="active" href="{{url_for('profile')}}" style="display: block;color: white;text-align: center;padding: 14px 16px;"><i class="fa fa-user tooltip" style="font-size:36px; position: relative;display: inline-block;"><span class="tooltiptext" style='font-size: 20px;'>My account</span></i></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- container -->
+		</div><!-- navbar-inner -->
+	</div><!--  navbar navbar-fixed-top -->
+	<br><br><br>
+
+	  <div class="card" >
+	    <div class="photo" style="background-image: url('../static/girl.jpg');"></div>
+	    <div class="banner" style="background-image: url('../static/code.jpg')"></div>
+	    <ul>
+	      <li style="background-color: white;"><b>Noor Ali</b></li>
+	      <li style="background-color: white;">Web Developer</li>
+	    </ul>
+	    <button class="contact" id="main-button">click to get in touch</button>
+	    <div class="social-media-banner">
+	      <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+	      <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+	    </div>
+	    <form class="email-form">
+	      <input id="name" type="text" placeholder="name" />
+	      <input id="email" type="text" placeholder="email" />
+	      <textarea id="comment" type="text" placeholder="comment"></textarea>
+	      <button class="contact">send</button>
+	    </form>
+	  </div> <!-- card -->
+</body>
+</html>

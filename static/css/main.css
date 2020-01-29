@@ -145,7 +145,6 @@ iframe {
   font-family: Poppins-Regular;
   font-size: 27px;
   color: #e5e5e5;
-  line-height: 1;
 }
 
 
@@ -174,7 +173,7 @@ iframe {
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 1;  
+
 }
 
 .container-login100::before {

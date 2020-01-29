@@ -3,10 +3,40 @@
 
 <head>
 	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.btn:hover {cursor: pointer;}
+	</style>
 </head>
 
-<body>
-	<p> Ok but why is everyone sad that the last decade has already ended? </p>
+
+<body style="background-image: url('../static/images/background.jpg'); background-size: 100%;">
+	<div>
+		<img src="../static/images/okbut.gif" width="200" height="150" style="position: fixed; margin-left: 30%; margin-top: 2%"> 
+		<br>
+		<img src="../static/images/why.gif" width="900" height="150" style="position: fixed; margin-left: 35%; margin-top: 7%;">
+		<br>
+		<img src="../static/images/noone.gif" width="700" height="150" style="position: fixed; margin-left: 26%; margin-top: 12%;">
+	</div>
+	<div>
+		<a href="{{ url_for('login') }}">
+		<input class="btn" type="button" value="LET'S" style='
+			margin-left: 40%;
+			margin-top: 25%;
+			width: 350px;
+		    height: 70px;
+		    border-radius: 35px;
+		    padding-left:16px;
+		    font-size: 45px;
+		    color: black;
+		    line-height: 1;
+		    font-family: "Comic Sans MS", cursive, sans-serif; 
+		    font-weight: bold;
+		    text-align: left;
+		    position: fixed;'></a>
+		<img src="../static/images/go.gif" width="200" height="130" style="position: fixed; margin-left: 48%; margin-top: 23.5%">
+	</div>
 </body>
 
 </html>

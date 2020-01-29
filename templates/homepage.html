@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel ="stylesheet" type = "text/css" href = "../static/css/design.css" />
+
+	<script>
+		$(".myBox").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});
+
+	</script>
+</head>
+
+<body style="background-image: url('../static/images/background.jpg'); z-index: -1;">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="{{url_for('homepage')}}"><i class="fa fa-home tooltip" style="font-size:36px;"><span class="tooltiptext" style='font-size: 20px;'> Home</span> </i></a></li>
+
+					    <li><a href="{{url_for('contact')}}">
+					    	<i class="fa fa-comments-o tooltip" style="font-size:36px">
+					    		<span class="tooltiptext" style='font-size: 20px;'>Contact us</span>
+					    	</i></a>
+					    </li>
+
+		    			<li><a class="active" href="{{url_for('profile')}}"><i class="fa fa-user tooltip" style="font-size:36px"><span class="tooltiptext" style='font-size: 20px;'>My account</span></i></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- container -->
+		</div><!-- navbar-inner -->
+	</div><!--  navbar navbar-fixed-top -->
+	<br><br><br>
+<!-- 	<div class="chip" style="margin-left: 35%;">
+		<a href="{{ url_for('snake') }}" style="text-decoration: none; color: black;">
+	 	<img src="../static/profilesnake.jpg"  width="96" height="96">Snake game
+	 </a>
+	</div>  -->
+	<div class="flex-container">
+		<div class="flex-item">
+		<div class="card" style="margin-left: 20%;">
+			<img src="../static/profilesnake.jpg" alt="snake" style="width:100%">
+			<a href="{{url_for('snake')}}">
+			<p><button>Snake Game</button></p>
+		</a>
+		</div>
+</div>
+	<div class="flex-item" style="margin-left: -50%;">
+			<div class="card" style="margin-left: 20%;">
+				<img src="../static/tic.png" alt="tic" style="width:100%; ">
+				<a href="{{url_for('tic')}}">
+				<p><button>Tic Tac Toe</button></p>
+				</a>
+			</div>
+	</div>
+</div>
+<br>
+	<div class="flex-container">
+		<div class="flex-item">
+			<div class="card" style="margin-left: 20%;">
+				<img src="../static/hangman.png" alt="hangman" style="width:100%; ">
+				<a href="{{url_for('hangman')}}">
+				<p><button>Hangman</button></p>
+				</a>
+			</div>
+		</div>
+			<div class="flex-item" style="margin-left: -50%;" >
+				<div class="card" style="margin-left: 20%;">
+					<img src="../static/mouse.png" alt="hit the dot" style="width:100%; ">
+					<a href="{{url_for('hit')}}">
+					<p><button>Hit the dot</button></p>
+					</a>
+				</div>
+			</div>
+	
+</div>
+		 
+</body>
+</html>

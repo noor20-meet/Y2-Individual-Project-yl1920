@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #851791;
+      overflow: visible;
+    }
+
+
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover{
+      background-color: #111;
+    }
+
+
+
+}
+
+
+.tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      z-index: 1;
+    }
+    .navbar .nav,
+    .navbar .nav > li {
+      float:none;
+      display:inline-block;
+      *display:inline; /* ie7 fix */
+      *zoom:1; /* hasLayout ie7 trigger */
+      vertical-align: top;
+    }
+
+    .navbar-inner {
+      text-align:center;
+    }
+
+.avatar {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 100%;
+  background: #C68587;
+  border: 6px solid #B3C9CB;
+  background-image: url(https://scontent-vie1-1.cdninstagram.com/hphotos-ash/t51.2885-19/10932224_821299211264682_1488190390_a.jpg);
+  background-size: cover;
+  background-position: 50% 25%;
+  -webkit-transition: border 0.5s linear;
+  transition: border 0.5s linear;
+  margin-bottom: 200%;
+}
+.avatar:after {
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f0e3c7), color-stop(100%, #6bcab4));
+  width: 10vw;
+  height: 10vw;
+  border-radius: 100%;
+  border: 1px solid white;
+  left: 4px;
+  top: 4px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+}
+
+.avatar:hover:after {
+  opacity: 0.7;
+}
+
+.avatar.open:hover:after {
+  opacity: 0;
+}
+
+.containerr {
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -webkit-transition: translate3d(-50%, -50%, 0);
+  transition: translate3d(-50%, -50%, 0);
+  position: absolute;
+  top: 45%;
+}
+
+#camera {
+  -webkit-transform: scale(0.4);
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+  top: 18%;
+  overflow: hidden;
+}
+
+#circle {
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transition: all 0.3s linear;
+  stroke-dashoffset: 33px;
+  stroke-dasharray: 33px;
+}
+
+#cameraFrame {
+  -webkit-transition: all 0.5s linear;
+  stroke-dashoffset: 72px;
+  stroke-dasharray: 72px;
+}
+
+#plus {
+  -webkit-transition: all 0.3s linear;
+  stroke-dashoffset: 5px;
+  stroke-dasharray: 5px;
+}
+
+#fileUpload {
+  overflow: hidden;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  opacity: 0;
+  left: 50%;
+  top: 16%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  z-index: 9999;
+  -webkit-transition: 250ms cubic-bezier(0.7, 0, 0.36, 1);
+  transition: 250ms cubic-bezier(0.7, 0, 0.36, 1);
+}
+#fileUpload:focus {
+  outline: none;
+  background: black;
+   
+}
+
+
+#openModal > span {
+  font-family: raleway;
+  font-size: 1.2vw;
+  top: 40%;
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.separatorLine {
+  margin-top: 15px;
+  width: 300%;
+  position: absolute;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.clearfix {
+  display: block;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.right > p {
+  font-size: 2vw;
+  text-transform: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-top: 0.5vw;
+  color: white;
+}
+
+
+.avatar:hover > #camera > #cameraFrame {
+  stroke-dashoffset: 0;
+}
+
+.avatar:hover > #camera > #circle {
+  stroke-dashoffset: 0px;
+}
+
+.avatar:hover > #camera > #plus {
+  stroke-dashoffset: 0px;
+}
+
+.avatar:active > #camera > #cameraFrame {
+  -webkit-transition: none;
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.avatar:active > #camera > #circle {
+  -webkit-transition: none;
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.avatar:active > #camera > #plus {
+  -webkit-transition: none;
+  stroke: rgba(255, 255, 255, 0);
+}
+
+.src {
+  font-family: raleway;
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+#camera {
+  -webkit-transition: 250ms cubic-bezier(0.7, 0, 0.36, 1);
+  transition: 250ms cubic-bezier(0.7, 0, 0.36, 1);
+  z-index: 9998;
+}
+
+.avatar.open > #camera {
+  -webkit-transform: scale(0);
+  fill: white;
+}
+
+.avatar.open > #openModal {
+  -webkit-transform: scale(0.95);
+}
+
+.avatar.open > #fileUpload {
+  opacity: 1;
+  -webkit-transition-delay: 250ms;
+}
+
+.avatar.open > #camera {
+  visibility: hidden;
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation {
+  width: 60%;
+  background-color: black;
+}
+
+img {
+  width: 25px;
+  border-radius: 50px;
+  float: left;
+}
+
+.logout {
+  font-size: 0.8em;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 0.45s;
+  -webkit-transition: opacity 0.35s;
+}
+
+.button {
+  text-decoration: none;
+  float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 25px;
+  background-color: black;
+  transition: width 0.35s;
+  -webkit-transition: width 0.35s;
+  overflow: hidden;
+}
+ #logout:hover{
+  width: 100px;
+}
+
+a:hover .logout {
+  opacity: 0.9;
+}
+
+
+	</style>
+	<script>
+
+$('#fileUpload').on('change',function(){
+  $('.avatar').removeClass('open');
+});
+$('.avatar').on('click',function(){
+  $(this).addClass('open');
+});
+// added code to close the modal if you click outside
+$('html').click(function() {
+ $('.avatar').removeClass('open');
+});
+
+$('.avatar').click(function(event){
+    event.stopPropagation();
+});
+
+	</script>
+</head>
+<body style="background-image: url('../static/background.jpg')">
+		<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="{{url_for('homepage')}}"><i class="fa fa-home tooltip" style="font-size:36px;"><span class="tooltiptext" style='font-size: 20px;'> Home</span> </i></a></li>
+
+					    <li><a href="{{url_for('contact')}}">
+					    	<i class="fa fa-comments-o tooltip" style="font-size:36px">
+					    		<span class="tooltiptext" style='font-size: 20px;'>Contact us</span>
+					    	</i></a>
+					    </li>
+
+		    			<li><a class="active" href="{{url_for('profile')}}"><i class="fa fa-user tooltip" style="font-size:36px"><span class="tooltiptext" style='font-size: 20px;'>My account</span></i></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- container -->
+		</div><!-- navbar-inner -->
+	</div><!--  navbar navbar-fixed-top -->
+
+	<div class="containerr clearfix">
+	   <div class="avatar">
+	     <input id="fileUpload" type="file" />
+	      <svg version="1.1" id="camera" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 15" enable-background="new 0 0 25 15" xml:space="preserve">
+	      <path id="cameraFrame" fill="none" stroke="white" stroke-miterlimit="10" d="M23.1,14.1H1.9c-0.6,0-1-0.4-1-1V1.9c0-0.6,0.4-1,1-1h21.2c0.6,0,1,0.4,1,1v11.3C24.1,13.7,23.7,14.1,23.1,14.1z"/>
+	      <path id="circle" fill="none" stroke="#ffffff" stroke-width="1.4" stroke-miterlimit="12" d="M17.7,7.5c0-2.8-2.3-5.2-5.2-5.2S7.3,4.7,7.3,7.5s2.3,5.2,5.2,5.2S17.7,10.3,17.7,7.5z"/>
+	      <g id="plus">
+	         <path fill="none" id="plusLine" class="line" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" d="M20.9,2.3v4.4"/>
+	         <path fill="none" class="line"stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" d="M18.7,4.6h4.4"/>
+	      </g>
+	     </svg>
+	  </div>
+	   </div> <!-- container clearfix -->
+	<div class="">
+		<div class="right" >
+			<p>{{username}}</p>
+		</div>
+		<div class="right" style="margin-top: 0%;">
+			<p>{{bio}}</p>
+		</div>
+		<div class="navigation">
+  
+	<a class="button" href="{{url_for('login')}}" id="logout">
+  	<img src="../static/images/logout.png">
+  
+  <div class="logout">LOGOUT</div>
+
+	</a>
+  
+</div>
+	</div>
+</body>
+</html>

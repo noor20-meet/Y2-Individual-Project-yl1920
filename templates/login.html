@@ -31,9 +31,9 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('../static/images/3156605.jpg');">
+		<div class="container-login100" style="background-image: url('../static/images/background.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action='/login' method = 'POST'>
 					<span class="login100-form-logo">
 						<i class="fa fa-gamepad"></i>
 					</span>
@@ -52,17 +52,23 @@
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+					<div class="contact100-form-checkbox" style="color: white;">
+						{{msg}}
+						<!-- <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">
 							Remember me
 						</label>
-					</div>
+ -->					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type = "submit">
 							Login
 						</button>
+					</div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="{{ url_for('signup') }}">
+							Sign up
+						</a>
 					</div>
 				</form>
 			</div>
