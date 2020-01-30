@@ -213,7 +213,7 @@ button.contact:focus
     height: 50px;
     margin-top: 25px;
     text-align: center;
-    position: absolute;
+    position: relative;
     -webkit-transition: all 1.5s ease-in-out;
     -moz-transition:    all 1.5s ease-in-out;
     -o-transition:      all 1.5s ease-in-out;

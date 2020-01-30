@@ -30,7 +30,7 @@ def update_bio(username,bio):
 def delete_user(username):
 	session.query(User).filter_by(username=username).delete()
 	session.commit()
-# delete_user("")
+# delete_user("celina")
 
 def query_all():
 	users=session.query(User).all()
